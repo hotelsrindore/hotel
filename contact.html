@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Book Your Room - Hotel SR Indore | Online Booking with Payment</title>
+    <meta name="description" content="Book your room at Hotel SR Indore online. Fill booking form, pay via UPI/PhonePe, get instant confirmation. Call 9165000090 for queries.">
+    <meta name="keywords" content="book hotel SR Indore, hotel booking Lasudia, online room booking Indore, UPI payment hotel">
+    <link rel="canonical" href="https://www.hotelsrindore.com/contact.html">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Hotel SR Indore",
+        "description": "Book rooms and contact Hotel SR Indore"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919165000090?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%20Hotel%20SR%20Indore" 
+       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>HOTEL SR</h1>
+                </div>
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-right">
+                    <a href="tel:+919165000090" class="btn-call" aria-label="Call Hotel SR">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Book Your Room</h1>
+            <p>Experience comfort and hospitality at Hotel SR Indore</p>
+        </div>
+    </section>
+
+    <!-- Booking System with Payment -->
+    <section class="booking-section">
+        <div class="container">
+            <!-- Step Indicator -->
+            <div class="booking-steps-indicator">
+                <div class="step-indicator active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Details</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Payment</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Confirm</span>
+                </div>
+            </div>
+
+            <!-- Step 1: Booking Details -->
+            <div class="booking-step active" id="step1">
+                <div class="booking-card">
+                    <h2>Booking Details</h2>
+                    <form id="bookingForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" id="guestName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp Number *</label>
+                                <input type="tel" id="guestPhone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="guestEmail" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Guests *</label>
+                                <input type="number" id="guests" min="1" max="10" value="2" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Check-In Date *</label>
+                                <input type="date" id="checkIn" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Check-Out Date *</label>
+                                <input type="date" id="checkOut" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Select Room Type *</label>
+                                <select id="roomType" required>
+                                    <option value="">Choose Room Type</option>
+                                    <option value="regular" data-price="999">Regular Room (2 Person) - ₹999/night</option>
+                                    <option value="deluxe" data-price="1599">Deluxe A.C. Room (2 Person) - ₹1,599/night</option>
+                                    <option value="extra" data-price="449">Extra Bed & Extra Person - ₹449/night</option>
+                                    <option value="dormitory" data-price="499">Dormitory (Per Person) - ₹499/night</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Special Requests (Optional)</label>
+                                <textarea id="specialRequests" rows="3" placeholder="Any special requirements..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-summary-box">
+                            <h3>Booking Summary</h3>
+                            <div class="summary-row">
+                                <span>Number of Nights:</span>
+                                <strong id="displayNights">-</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Room Rate:</span>
+                                <strong id="displayRate">-</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <strong id="displaySubtotal">-</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>GST (12%):</span>
+                                <strong id="displayGst">-</strong>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total Amount:</span>
+                                <strong id="displayTotal">₹0</strong>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-next-step" onclick="goToPayment()">
+                            Proceed to Payment <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Step 2: Payment with QR Code -->
+            <div class="booking-step" id="step2">
+                <div class="booking-card">
+                    <h2>Complete Payment</h2>
+                    <div class="payment-content">
+                        <div class="payment-instructions">
+                            <h3>Scan QR to Pay</h3>
+                            <p>Scan this QR code with PhonePe, Google Pay, Paytm or any UPI app to complete your payment.</p>
+                            
+                            <div class="qr-code-box">
+                                <img src="qr.png" alt="PhonePe Payment QR Code" class="payment-qr-main">
+                                <p class="qr-label">Scan with any UPI app</p>
+                            </div>
+                            
+                            <div class="payment-amount">
+                                <span>Amount to Pay</span>
+                                <h2 id="payAmount">₹0</h2>
+                            </div>
+                            
+                            <div class="upi-id-display">
+                                <p><strong>UPI ID:</strong> Q05089812@ybl</p>
+                                <p><strong>Name:</strong> Hotel S R Indore</p>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-verification">
+                            <h3>After Payment</h3>
+                            <div class="verification-steps">
+                                <div class="ver-step">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <p>Complete payment via UPI</p>
+                                </div>
+                                <div class="ver-step">
+                                    <i class="fas fa-camera"></i>
+                                    <p>Take screenshot of payment confirmation</p>
+                                </div>
+                                <div class="ver-step">
+                                    <i class="fas fa-upload"></i>
+                                    <p>Upload screenshot below</p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-proof-upload">
+                                <label class="upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Payment Screenshot *</span>
+                                    <input type="file" id="paymentProof" accept="image/*" required>
+                                </label>
+                                <div id="uploadPreview"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Transaction ID / UTR Number *</label>
+                                <input type="text" id="transactionId" placeholder="Enter 12-digit transaction ID" required>
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn-back" onclick="backToDetails()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button class="btn-confirm" onclick="confirmBooking()">
+                                    Submit Booking <i class="fas fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="booking-step" id="step3">
+                <div class="confirmation-box">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Booking Submitted Successfully!</h2>
+                    <p class="conf-message">Thank you! Your booking request has been received. We will verify your payment and confirm your booking within 30 minutes via WhatsApp and Email.</p>
+                    
+                    <div class="booking-details-display">
+                        <h3>Booking Details</h3>
+                        <div class="detail-row">
+                            <span>Booking ID:</span>
+                            <strong id="confirmBookingId">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Guest Name:</span>
+                            <strong id="confirmName">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Check-In:</span>
+                            <strong id="confirmCheckIn">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Check-Out:</span>
+                            <strong id="confirmCheckOut">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Room Type:</span>
+                            <strong id="confirmRoom">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Total Amount:</span>
+                            <strong id="confirmAmount" class="amount-highlight">-</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h3>What's Next?</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Our team will verify your payment</li>
+                            <li><i class="fas fa-check"></i> You'll receive confirmation via WhatsApp & Email</li>
+                            <li><i class="fas fa-check"></i> Bring a valid ID proof during check-in</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="conf-actions">
+                        <a href="index.html" class="btn-home">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                        <button onclick="sendToWhatsApp()" class="btn-whatsapp-share">
+                            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+919165000090">9165000090</a></p>
+                    <span>24/7 Available</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:hotelsrindore@gmail.com">hotelsrindore@gmail.com</a></p>
+                    <span>Quick Response</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>98/1/8, AB Rd, Dewas Naka</p>
+                    <span>Lasudia Mori, Indore</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/919165000090" target="_blank">Chat with Us</a></p>
+                    <span>Instant Response</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Our Location - Opposite Lasudia Police Station</h2>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.344!2d75.857274!3d22.719568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd24b9f2d705%3A0x7c1e5b3a1e5b3a1e!2s98%2F1%2F8%2C%20AB%20Rd%2C%20Dewas%20Naka%2C%20Lasudia%20Mori%2C%20Indore%2C%20Madhya%20Pradesh%20452010!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>HOTEL SR</h3>
+                    </div>
+                    <p>Clean, safe and value for money hotel at Lasudia Mori, Dewas Naka, Indore.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/hotelsrindore2025" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://search.google.com/local/writereview?placeid=ChIJ7Wg53TcdYzkRNrZlsj-HFRA" target="_blank" rel="noopener">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://wa.me/919165000090" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>98/1/8, AB Road, Lasudia Mori, Dewas Naka, Indore, MP 452010</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+919165000090">9165000090</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:hotelsrindore@gmail.com">hotelsrindore@gmail.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Designed & Developed By</h4>
+                    <p class="footer-credit">
+                        <a href="https://theunlocksales.github.io/theunlocksales/" target="_blank" rel="noopener">
+                            The Unlock Sales
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hotel SR Indore - hotelsrindore.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
