@@ -14,26 +14,29 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+ <!-- Header -->
   <header class="header" id="header">
     <div class="container">
       <div class="nav-wrapper">
-        <div class="logo"><h1>HOTEL SR</h1></div>
+        <div class="logo"><h1>HOTEL SR INDORE</h1></div>
         <nav class="navbar" id="navbar">
           <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="rooms.html" class="active">Rooms</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-right">
-          <a href="tel:+919165000090" class="btn-call"><i class="fas fa-phone"></i></a>
-          <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+          <a href="tel:+919165000090" class="btn-call" aria-label="Call Hotel SR"><i class="fas fa-phone"></i></a>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
-
   <section class="page-hero">
     <div class="container">
       <h1>Rooms & Tariff</h1>
@@ -41,103 +44,103 @@
     </div>
   </section>
 
-  <section class="rooms-preview">
+  <!-- Rooms & Pricing -->
+  <section class="rooms-preview" id="rooms">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Stay Options</span>
-        <h2 class="section-title">Choose Your Room</h2>
-        <p class="section-description">All rooms come with fresh linen, daily cleaning, and friendly service.</p>
+        <span class="section-label">Room Tariff</span>
+        <h2 class="section-title">Rooms & Pricing</h2>
+        <p class="section-description">Transparent pricing for a neat, safe and comfortable stay.</p>
       </div>
 
       <div class="rooms-grid">
-        <!-- Regular -->
         <div class="room-card">
           <div class="room-image">
-            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=900&q=80" alt="Regular Room Hotel SR" />
+            <img src="room1.jpeg" alt="Regular Room Hotel SR" />
             <div class="room-badge">Popular</div>
-            <div class="room-overlay"><a href="index.html#booking" class="btn-view-room">Book Regular Room</a></div>
+            <div class="room-overlay"><a href="#booking" class="btn-view-room">Book Regular Room</a></div>
           </div>
           <div class="room-content">
             <div class="room-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             <h3>Regular Room (2 Person)</h3>
-            <p>Ideal for short business trips and budget travellers looking for a clean, safe room.</p>
-            <div class="room-features">
-              <span><i class="fas fa-users"></i> 2 Guests</span>
-              <span><i class="fas fa-bath"></i> Attached Bathroom</span>
-              <span><i class="fas fa-wifi"></i> Free WiFi</span>
-            </div>
-            <div class="room-footer">
-              <div class="room-price"><span class="price">₹999</span><span class="period">/night</span></div>
-              <a href="index.html#booking" class="btn-room">Book Now</a>
-            </div>
+            <p>Comfortable non‑AC room with clean bedding and attached bathroom.</p>
+            <div class="room-features"><span><i class="fas fa-users"></i> 2 Guests</span><span><i class="fas fa-bath"></i> Attached Bath</span><span><i class="fas fa-wifi"></i> Free WiFi</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">₹999</span><span class="period">/night</span></div><a href="#booking" class="btn-room">Book</a></div>
           </div>
         </div>
 
-        <!-- Deluxe AC -->
         <div class="room-card">
           <div class="room-image">
-            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80" alt="Deluxe AC Room Hotel SR" />
+            <img src="room2.jpeg" alt="Deluxe AC Room Hotel SR" />
             <div class="room-badge luxury">AC Deluxe</div>
-            <div class="room-overlay"><a href="index.html#booking" class="btn-view-room">Book Deluxe A.C.</a></div>
+            <div class="room-overlay"><a href="#booking" class="btn-view-room">Book Deluxe A.C.</a></div>
           </div>
           <div class="room-content">
             <div class="room-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             <h3>Deluxe A.C. Room (2 Person)</h3>
-            <p>Premium AC room with elegant interiors, TV, and comfortable double bed.</p>
-            <div class="room-features">
-              <span><i class="fas fa-snowflake"></i> Air‑Conditioned</span>
-              <span><i class="fas fa-tv"></i> LED TV</span>
-              <span><i class="fas fa-bed"></i> Queen Bed</span>
-            </div>
-            <div class="room-footer">
-              <div class="room-price"><span class="price">₹1,599</span><span class="period">/night</span></div>
-              <a href="index.html#booking" class="btn-room">Book Now</a>
-            </div>
+            <p>Air‑conditioned room with double bed, TV and neat washroom.</p>
+            <div class="room-features"><span><i class="fas fa-snowflake"></i> AC</span><span><i class="fas fa-tv"></i> LED TV</span><span><i class="fas fa-bed"></i> Double Bed</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">₹1,599</span><span class="period">/night</span></div><a href="#booking" class="btn-room">Book</a></div>
           </div>
         </div>
 
-        <!-- Extra Bed -->
         <div class="room-card">
           <div class="room-image">
             <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&q=80" alt="Extra Bed Hotel SR" />
-            <div class="room-overlay"><a href="index.html#booking" class="btn-view-room">Add Extra Bed</a></div>
+            <div class="room-overlay"><a href="#booking" class="btn-view-room">Add Extra Bed</a></div>
           </div>
           <div class="room-content">
             <h3>Extra Bed & Extra Person</h3>
-            <p>Add one more person with a comfortable mattress and bedding in your room.</p>
-            <div class="room-features">
-              <span><i class="fas fa-user-plus"></i> Add‑on</span>
-              <span><i class="fas fa-bed"></i> Mattress</span>
-            </div>
-            <div class="room-footer">
-              <div class="room-price"><span class="price">₹449</span><span class="period">/night</span></div>
-              <a href="index.html#booking" class="btn-room">Book Now</a>
-            </div>
+            <p>Add a comfortable mattress and bedding for one additional guest.</p>
+            <div class="room-features"><span><i class="fas fa-user-plus"></i> Add‑on</span><span><i class="fas fa-bed"></i> Mattress</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">₹449</span><span class="period">/night</span></div><a href="#booking" class="btn-room">Add</a></div>
           </div>
         </div>
 
-        <!-- Dormitory -->
         <div class="room-card">
           <div class="room-image">
             <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&q=80" alt="Dormitory Hotel SR" />
-            <div class="room-overlay"><a href="index.html#booking" class="btn-view-room">Book Dormitory</a></div>
+            <div class="room-overlay"><a href="#booking" class="btn-view-room">Book Dormitory</a></div>
           </div>
           <div class="room-content">
             <h3>Dormitory (Per Person)</h3>
-            <p>Budget‑friendly shared room for groups, staff, and long‑term stays.</p>
-            <div class="room-features">
-              <span><i class="fas fa-users"></i> Shared Beds</span>
-              <span><i class="fas fa-rupee-sign"></i> Best Price</span>
-            </div>
-            <div class="room-footer">
-              <div class="room-price"><span class="price">₹499</span><span class="period">/person</span></div>
-              <a href="index.html#booking" class="btn-room">Book Now</a>
-            </div>
+            <p>Budget‑friendly shared accommodation for groups and teams.</p>
+            <div class="room-features"><span><i class="fas fa-users"></i> Shared</span><span><i class="fas fa-rupee-sign"></i> Budget</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">₹499</span><span class="period">/person</span></div><a href="#booking" class="btn-room">Book</a></div>
           </div>
         </div>
+
+        <div class="room-card">
+          <div class="room-image">
+            <img src="exterior.jpeg" alt="Deluxe AC Room Hotel SR" />
+            <div class="room-badge luxury">Book Hall</div>
+            <div class="room-overlay"><a href="https://wa.me/919165000090" class="btn-view-room">Book hall for parties</a></div>
+          </div>
+          <div class="room-content">
+            <div class="room-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3>Book hall for parties</h3>
+            <p>Hall available for office parties, kitty parities, for funcitons</p>
+            <div class="room-features"><span><i class="fas fa-snowflake"></i> AC</span><span><i class="fas fa-tv"></i> LED TV</span><span><i class="fas fa-bed"></i> Double Bed</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">get quote</span><span class="period"></span></div><a href="https://wa.me/919165000090" class="btn-room">Book</a></div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-image">
+            <img src="business hall.jpeg" alt="Deluxe AC Room Hotel SR" />
+            <div class="room-badge luxury">Book Banquet Hall</div>
+            <div class="room-overlay"><a href="https://wa.me/919165000090" class="btn-view-room">Book hall for functions</a></div>
+          </div>
+          <div class="room-content">
+            <div class="room-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3>Book hall for functions</h3>
+            <p>Banquet Hall available for Ring Ceremony, for all family funcitons</p>
+            <div class="room-features"><span><i class="fas fa-snowflake"></i> AC</span><span><i class="fas fa-tv"></i> LED TV</span><span><i class="fas fa-bed"></i> Double Bed</span></div>
+            <div class="room-footer"><div class="room-price"><span class="price">get quote</span><span class="period"></span></div><a href="https://wa.me/919165000090" class="btn-room">Book</a></div>
+          </div>
       </div>
 
-      <p class="tariff-note">Taxes extra as applicable. Rates may change during peak dates and events.</p>
+      <p class="tariff-note">All rates may change without notice. Service charges extra. Room service: 7 AM – 11 PM.</p>
     </div>
   </section>
 
