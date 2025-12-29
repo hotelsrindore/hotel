@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Hotel SR Indore | View Our Rooms, Halls & Hotel SR</title>
+  <meta name="description" content="Browse Hotel SR Indore photo gallery. View our clean rooms, banquet halls, Hotel SR, and amenities. See why guests love staying with us.">
+  <meta name="keywords" content="Hotel SR gallery, Indore hotel photos, room images, hotel Hotel SR pictures">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/919165000090?text=Hi%20Hotel%20SR,%20I%20want%20to%20book%20a%20room" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <img src="favicon.svg" alt="Hotel SR Indore Logo" class="logo-img">
+          <h1 class="logo-text">HOTEL SR</h1>
+        </div>
+
+     <nav class="navbar" id="navbar">
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="nav-right">
+    <a href="tel:+919165000090" class="btn-call" aria-label="Call Manager"><i class="fas fa-phone"></i></a>
+    <a href="index.html#booking" class="btn-primary">Book Now</a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Hero -->
+  <section class="hero" style="height: 60vh; min-height: 500px; margin-top: 60px;">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-wrapper">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-label">Photo Gallery</span>
+          <h2 class="hero-title" style="font-size: 48px;">Explore Hotel SR Indore</h2>
+          <p class="hero-subtitle">Take a visual tour of our rooms, Hotel SR, and amenities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section style="padding: 60px 0 30px; background: var(--white);">
+    <div class="container">
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;">
+        <button class="btn-deal filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> All Photos (<span id="currentCount">21</span>)
+        </button>
+        <button class="btn-deal filter-btn" data-filter="rooms">
+          <i class="fas fa-bed"></i> Rooms
+        </button>
+        <button class="btn-deal filter-btn" data-filter="Lobby">
+          <i class="fas fa-door-open"></i> Lobby
+        </button>
+        <button class="btn-deal filter-btn" data-filter="Hotel SR">
+          <i class="fas fa-concierge-bell"></i> Hotel SR
+        </button>
+      </div>
+      
+      <p style="text-align: center; color: var(--text-light); font-size: 14px;">
+        Showing <strong id="displayCount">18</strong> of <strong id="totalCount">21</strong> photos
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid (Simple Photo Grid) -->
+  <section class="gallery-section" style="padding: 30px 0 90px; background: var(--white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        
+        <!-- Images 1-21 -->
+        <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="regularroom.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+
+        <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage2.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+
+        <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage12.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+        
+         <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage16.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+
+        <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage17.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+
+        <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage18.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: var(--gradient-gold); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Rooms</div>
+        </div>
+        
+         <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage1.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+        <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage4.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+        <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage19.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+        <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage7.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+        <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage8.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+        <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage9.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+     <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage10.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+          <div class="gallery-item" data-category="Lobby" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage11.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+      <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Lobby</div>
+        </div>
+
+
+        <div class="gallery-item" data-category="Hotel SR" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="front.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #1A2F4B 0%, #2A4A6B 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Hotel SR</div>
+        </div>
+
+
+        <div class="gallery-item" data-category="Hotel SR" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="hotelimage13.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #1A2F4B 0%, #2A4A6B 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Hotel SR</div>
+        </div>
+
+
+        <div class="gallery-item" data-category="Hotel SR" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="exterior.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #1A2F4B 0%, #2A4A6B 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Hotel SR</div>
+        </div>
+
+                <div class="gallery-item" data-category="Hotel SR" onclick="openLightbox(this)" style="cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="reception.jpeg" alt="Hotel SR Indore" style="width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.3s;">
+          <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #1A2F4B 0%, #2A4A6B 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">Hotel SR</div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- Company Video Section with Overview (SQUARE FORMAT) -->
+<section style="padding: 90px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">Hotel SR Indore - Video Tour</h2>
+      <p class="section-description">Watch our company video to learn more about Hotel SR Indore</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 50px;">
+      <!-- Video Section - SQUARE FORMAT -->
+      <div>
+        <div style="position: relative; width: 100%; aspect-ratio: 1 / 1; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.2); background: #000;">
+          <video 
+            width="100%" 
+            height="100%"
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+            controls 
+            poster="video-thumbnail.jpg">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Overview & Details -->
+      <div>
+        <h3 style="font-size: 28px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">
+          Welcome to Hotel SR Indore
+        </h3>
+        
+        <p style="font-size: 16px; color: var(--text-light); line-height: 1.8; margin-bottom: 25px;">
+          Discover the perfect blend of comfort, cleanliness, and affordability. Located at Dewas Naka in the heart of Indore, Hotel SR Indore offers a welcoming stay with modern amenities and warm hospitality.
+        </p>
+
+        <!-- Highlights -->
+        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: var(--accent-color); font-size: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+            <div>
+              <strong style="color: var(--primary-color); display: block; margin-bottom: 3px;">Clean & Hygienic Rooms</strong>
+              <p style="color: var(--text-light); font-size: 14px; margin: 0;">Well-maintained accommodations with attached bathrooms</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: var(--accent-color); font-size: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+            <div>
+              <strong style="color: var(--primary-color); display: block; margin-bottom: 3px;">Modern Amenities</strong>
+              <p style="color: var(--text-light); font-size: 14px; margin: 0;">Free WiFi, TV, 24/7 hot water, and comfortable bedding</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: var(--accent-color); font-size: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+            <div>
+              <strong style="color: var(--primary-color); display: block; margin-bottom: 3px;">Prime Location</strong>
+              <p style="color: var(--text-light); font-size: 14px; margin: 0;">15 mins from airport, 8 mins from railway station</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: var(--accent-color); font-size: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+            <div>
+              <strong style="color: var(--primary-color); display: block; margin-bottom: 3px;">Affordable Pricing</strong>
+              <p style="color: var(--text-light); font-size: 14px; margin: 0;">Transparent rates with no hidden charges</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: var(--accent-color); font-size: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+            <div>
+              <strong style="color: var(--primary-color); display: block; margin-bottom: 3px;">24/7 Support</strong>
+              <p style="color: var(--text-light); font-size: 14px; margin: 0;">Always available to assist you with any needs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="index.html#booking" class="btn-deal">
+            <i class="fas fa-calendar-check"></i> Book Now
+          </a>
+          <a href="contact.html" class="btn-deal" style="background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color);">
+            <i class="fas fa-phone"></i> Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section Below Video -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px;">
+      <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+        <h4 style="color: var(--accent-color); font-size: 32px; font-weight: 700; margin: 0;">40+</h4>
+        <p style="color: var(--text-light); font-size: 14px; margin: 10px 0 0;">Happy Guests Daily</p>
+      </div>
+      <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+        <h4 style="color: var(--accent-color); font-size: 32px; font-weight: 700; margin: 0;">20+</h4>
+        <p style="color: var(--text-light); font-size: 14px; margin: 10px 0 0;">Comfortable Rooms</p>
+      </div>
+      <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+        <h4 style="color: var(--accent-color); font-size: 32px; font-weight: 700; margin: 0;">⭐ 4.8</h4>
+        <p style="color: var(--text-light); font-size: 14px; margin: 10px 0 0;">Google Rating</p>
+      </div>
+      <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+        <h4 style="color: var(--accent-color); font-size: 32px; font-weight: 700; margin: 0;">24/7</h4>
+        <p style="color: var(--text-light); font-size: 14px; margin: 10px 0 0;">Customer Support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+  <!-- CTA Section -->
+  <section class="hero" style="height: auto; padding: 80px 0; margin-top: 0;">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content-wrapper">
+      <div class="container">
+        <div class="hero-content">
+          <h2 class="hero-title" style="font-size: 42px; margin-bottom: 20px;">Like What You See?</h2>
+          <p class="hero-subtitle" style="margin-bottom: 30px;">Book your room today and experience the comfort yourself</p>
+          <div class="hero-buttons">
+            <a href="index.html#booking" class="btn-hero-primary">Book Your Room Now</a>
+            <a href="contact.html" class="btn-hero-secondary"><i class="fas fa-envelope"></i> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <h3>HOTEL SR Indore</h3>
+          </div>
+          <p>Clean, safe and affordable stay at Dewas Naka, Indore. Your comfort is our priority.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/hotelsrindore2025" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJ7Wg53TcdYzkRNrZlsj-HFRA" target="_blank" rel="noopener"><i class="fab fa-google"></i></a>
+            <a href="https://wa.me/919165000090" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Pricing</a></li>
+            <li><a href="index.html#booking">Book Now</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>In front of Lasudia Police Station, 98/1/8, AB Rd, Dewas Naka, Indore, MP 452010</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>Manager: <a href="tel:+919165000090">+91 91650 00090</a></span>
+            </li>
+            <li>
+              <i class="fas fa-user-tie"></i>
+              <span>CEO: <a href="tel:+919165000080">+91 91650 00080</a></span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:hotelsrindore@gmail.com">hotelsrindore@gmail.com</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Business Hours</h4>
+          <ul>
+            <li>Check-In: 12:00 PM</li>
+            <li>Check-Out: 11:00 AM</li>
+            <li>Reception: 24/7 Open</li>
+            <li>Room Service: 7 AM - 11 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hotel SR Indore. All Rights Reserved.</p>
+        <p class="footer-credit">
+          Designed & Developed by <a href="https://theunlocksales.github.io/theunlocksales/" target="_blank" rel="noopener"><strong>The Unlock Sales</strong></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <style>
+    /* Hover Effect */
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .gallery-section > .container > div {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
